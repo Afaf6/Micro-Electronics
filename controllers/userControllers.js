@@ -9,7 +9,7 @@ const registerUser = async(req, res) => {
         if (!username || !email || !password) return res.status(400).json({msg: "Missing Data"});
         const existuser = await User.findOne({email});
 
-        if (existuser) return res.status(400).json({msg: "Accont Already exist"});
+        if (existuser) return res.status(400).json({msg: "Account Already exist"});
         const hashingPassword = await bcrypt.hash(password, 10);
 
         const user = await User.create({
