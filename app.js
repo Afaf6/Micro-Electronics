@@ -21,9 +21,9 @@ dbConnection();
 const userRoutes = require("./routes/userRoutes");
 app.use("/api", userRoutes);
 
-const productRoutes = require("./routes/productRoutes");
-app.use("/api", productRoutes);
 
+const productRoutes = require("./routes/productRoutes");
+app.use("/api", productRoutes );
 
 
 const port = process.env.PORT || 5000;
