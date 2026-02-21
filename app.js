@@ -27,9 +27,15 @@ dbConnection();
 const userRoutes = require("./routes/userRoutes");
 app.use("/api", userRoutes);
 
+
 const productRoutes = require("./routes/productRoutes");
+<<<<<<< HEAD
 
 app.use("/api", productRoutes);
+=======
+app.use("/api", productRoutes );
+
+>>>>>>> 9e5eee3966da54df35207c95ffd5968d05d020b0
 
 
 const port = process.env.PORT || 5000;
