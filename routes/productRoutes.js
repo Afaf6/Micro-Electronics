@@ -2,8 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 
-const product = require ("../controllers/productControllers");
+const {product, filterProduct} = require ("../controllers/productControllers");
 
 router.post("/product", product);
+router.post("/filterProduct", filterProduct);
 
 module.exports = router;
