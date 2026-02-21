@@ -4,15 +4,19 @@ const { schema } = require("./User");
 const producrSchema = new mongoose.Schema({
     product_name: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     price: {
         type: Number,
         required: true
     },
-    qintity: {
+    quantity: {
         type: Number,
         required: true 
     }
 
 },{timestamps: true});
+
+const Product = mongoose.model("Product" , producrSchema);
+module.exports = Product;
